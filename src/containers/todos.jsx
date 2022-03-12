@@ -27,13 +27,36 @@ const Button = styled.button`
 `;
 const Todos = () => {
     const [completed, setCompleted] = useState("");
-    const { isLoading, error, data } = useQuery("repoData", () =>
+    const { isLoading, error, data } = useQuery("todosData", () =>
         fetch("https://jsonplaceholder.typicode.com/todos").then((res) =>
             res.json()
         )
     );
 
-    if (isLoading) return "Loading...";
+    if (isLoading)
+        return (
+            <div>
+                <Button
+                    onClick={(event) => {
+                        event.preventDefault();
+
+                        let toSetCompleted =
+                            completed === "" || completed === "Pending"
+                                ? "Completed"
+                                : "Pending";
+                        setCompleted(toSetCompleted);
+                    }}
+                    style={{
+                        color: completed != "Completed" ? "#fff" : theme.accent,
+                        backgroundColor:
+                            completed != "Completed" ? theme.accent : "#fff",
+                    }}
+                >
+                    Filter by {completed === "" ? "Pending" : completed}
+                </Button>
+                
+            </div>
+        );
 
     if (error) return "An error has occurred: " + error.message;
 
@@ -51,7 +74,8 @@ const Todos = () => {
                 }}
                 style={{
                     color: completed != "Completed" ? "#fff" : theme.accent,
-                    backgroundColor: completed != "Completed" ? theme.accent : "#fff",
+                    backgroundColor:
+                        completed != "Completed" ? theme.accent : "#fff",
                 }}
             >
                 Filter by {completed === "" ? "Pending" : completed}
