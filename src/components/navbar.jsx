@@ -17,8 +17,8 @@ const NavBar = ({ links, colors }) => {
     return (
         <Navbar style={{backgroundColor:colors.barColor}}>
             {/*mapped links which are given in props, component can be used for any project*/}
-            {links.map((link) => (
-                <NavLink>
+            {links.map((link, index) => (
+                <NavLink key={index}>
                     <Link
                         style={{
                             textDecoration: "none",
