@@ -30,7 +30,7 @@ const Blog = () => {
         );
     if (error) return "An error has occurred: " + error.message;
     return (
-        <div className="blog">
+        <div className="blog" id="blog-div">
             <h1>Blog</h1>
             <div className="card-container">
                 {posts.map((post, index) => (

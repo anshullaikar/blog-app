@@ -135,6 +135,13 @@ html {
     font-family: "Roboto", sans-serif;
 }
 
+#blog-div {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .blog a {
     text-decoration: none;
     color: #181a18;
@@ -143,10 +150,11 @@ html {
 .blog h1 {
     font-size: 3rem;
     margin: 1rem;
+    margin-top:3rem;
     text-align: center;
 }
 
-.blog .card-container {
+.card-container {
     width: 90%;
     display: flex;
     flex-direction: column;

@@ -5,6 +5,7 @@ import theme from "../styles/settings.json";
 import styled from "styled-components";
 const Button = styled.button`
     background-color: #fff;
+    width:10rem;
     outline: 0;
     margin: 0;
     margin-left: 8ch;
@@ -20,6 +21,7 @@ const Button = styled.button`
     }
     :hover {
         background-color: ${theme.accent};
+        cursor: pointer;
     }
     :active {
         background-color: ${theme.secondary};
