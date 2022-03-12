@@ -6,12 +6,13 @@ import Todos from "./containers/todos";
 import Post from "./containers/post";
 import { Route } from "react-router-dom";
 import "./App.css";
+import theme from "./settings.json"
 import { Switch } from "react-router-dom";
 class App extends Component {
     render() {
         return (
             <div id="app-container">
-                <NavBar />
+                <NavBar colors = {{"barColor":theme.barColor, "linkColor":theme.linkColor}}links ={[{"to":"/", "name":"Home"}, {"to":"/blog", "name":"Blog"}, {"to":"/todos", "name":"Todos"}]}/>
                 <div className="content">
                     <Switch>
                         <Route

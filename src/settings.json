@@ -1,0 +1,7 @@
+{
+    "primary":"",
+    "secondary":"",
+    "barColor":"#EFA18A", 
+    "linkColor":"#FFF", 
+    "navLinks":[{"to":"/", "name":"Home"}]
+}

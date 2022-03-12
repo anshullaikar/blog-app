@@ -59,24 +59,6 @@ html{
   height:100vh;
 }
 
-.navbar{
-  height:4rem;
-  width:100%;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #F08D7E;
-  list-style-type: none;
-  
-}
-.navbar li{
-  margin:2rem;
-
-}
-.navbar a {
-  text-decoration: none;
-  color:white;
-}
 
 .blog a{
   text-decoration: none;
