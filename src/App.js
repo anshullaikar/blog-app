@@ -6,7 +6,7 @@ import Todos from "./containers/todos";
 import Post from "./containers/post";
 import { Route } from "react-router-dom";
 import "./App.css";
-import theme from "./settings.json"
+import theme from "./styles/settings.json"
 import { Switch } from "react-router-dom";
 class App extends Component {
     render() {

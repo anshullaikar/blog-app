@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const CardDiv = styled.ul`
+const CardDiv = styled.div`
     margin-top: 2rem;
     margin-left: 5ch;
     margin-right: 5ch;

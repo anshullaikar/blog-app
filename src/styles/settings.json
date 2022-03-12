@@ -3,6 +3,5 @@
     "secondary":"#ACAEC5",
     "accent":"#DDA6B9",
     "barColor":"#EFA18A", 
-    "linkColor":"#FFF", 
-    "navLinks":[{"to":"/", "name":"Home"}]
+    "linkColor":"#FFF"
 }

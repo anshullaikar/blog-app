@@ -1,23 +1,37 @@
-import React, { Component } from 'react';
-class Comment extends Component { 
-    render() { 
-        return (
-            <div className="comment">
-                <div className="comment-body">
-                    <h2>{this.props.name}</h2>
-                    <p>{this.props.body}</p>
-                    <h5>Email: {this.props.email}</h5>
-                </div>
-            </div>
-        );
-    }
-}
- 
-export default Comment;
+import React from "react";
+import styled from "styled-components";
 
-// // 0:
-// body: "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium"
-// email: "Eliseo@gardner.biz"
-// id: 1
-// name: "id labore ex et quam laborum"
-// postId: 1
+const CommentDiv = styled.div`
+    margin-left: 10ch;
+    margin-right: 5ch;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+    border-left: 2px solid rgba(0, 0, 0, 0.12);
+    padding: 2rem;
+`;
+const CommentName = styled.h2`
+    font-weight: 400;
+    font-size: 0.8rem;
+    padding-bottom: 0.5rem;
+`;
+
+const CommentBody = styled.p`
+    font-weight: 300;
+    font-size: 0.8rem;
+`;
+
+const CommentEmail = styled.h5`
+    margin-top: 0.8rem;
+    font-size: 0.8rem;
+    font-style: italic;
+    font-weight: 300;
+`;
+
+const Comment = ({ name, body, email }) => (
+    <CommentDiv>
+            <CommentName>{name}</CommentName>
+            <CommentBody>{body}</CommentBody>
+            <CommentEmail>Email: {email}</CommentEmail>
+    </CommentDiv>
+);
+
+export default Comment;
