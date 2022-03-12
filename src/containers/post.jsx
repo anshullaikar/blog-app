@@ -28,6 +28,7 @@ class Post extends Component {
         return (
             <div>
                 <Card
+                    type="blog"
                     title={this.state.post.title}
                     body={this.state.post.body}
                     author={this.state.post.userId}
