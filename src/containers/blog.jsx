@@ -20,7 +20,7 @@ class Blog extends Component {
                     {this.state.posts.map((post, index) => (
                         <Link className="blog-card" to={`/blog/${post.id}`}>
                             <Card
-                                
+                                type="blog"
                                 title={post.title}
                                 key={post.id}
                                 body={post.body}

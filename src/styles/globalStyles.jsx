@@ -10,4 +10,9 @@ export const AppRootStyle = createGlobalStyle`
     html {
         font-family: "Roboto", sans-serif;
     }
+    /*setting container height and width with vh and vw unsure if it is the most optimal method*/
+    #app-container {
+        width: 100vw;
+        height: 100vh;
+    }
 `;
