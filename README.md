@@ -10,4 +10,12 @@ Instructions to open project:
 
 Please download as a zip and extract, or directly clone either git branch to your system. 
 
-Then please run npm start to view the code in action.  
+please run `npm i` followed by `npm start` to view the code in action.  
+
+Notable features in `revision`:
+- I have made all the components independent and reused the card component in both the Todos and Blog section after making it customisable using props.
+- Have created a theme json which changes all the colours of the entire project using keywords `primary`, `secondary` or `accent`
+- Made a fully independent navbar which can accept a list of strings and show them in the navbar, with the colours of choice as well. 
+- Used React Query so that data is cached and there is proper validation
+- Used *only* functional programming and hooks (useState, useEffect) to make code cleaner and simpler
+- Routing (which was in `master` as well) using React Router
