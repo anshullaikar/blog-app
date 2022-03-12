@@ -7,7 +7,6 @@ import Post from "./components/post";
 import { Route } from "react-router-dom";
 import "./App.css";
 import { Switch } from "react-router-dom";
-
 class App extends Component {
     render() {
         return (
