@@ -1,6 +1,7 @@
 {
-    "primary":"",
-    "secondary":"",
+    "primary":"#EFA18A",
+    "secondary":"#ACAEC5",
+    "accent":"#DDA6B9",
     "barColor":"#EFA18A", 
     "linkColor":"#FFF", 
     "navLinks":[{"to":"/", "name":"Home"}]
