@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Card from "./card";
+import Card from "../components/card";
 import Link from "react-router-dom/Link";
 class Blog extends Component {
     state = {

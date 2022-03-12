@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import NavBar from "./components/navbar";
-import Home from "./components/home";
-import Blog from "./components/blog";
-import Todos from "./components/todos";
-import Post from "./components/post";
+import Home from "./containers/home";
+import Blog from "./containers/blog";
+import Todos from "./containers/todos";
+import Post from "./containers/post";
 import { Route } from "react-router-dom";
 import "./App.css";
 import { Switch } from "react-router-dom";

@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import Card from "./card";
-import Comment from "./comment";
+import Card from "../components/card";
+import Comment from "../components/comment";
 class Post extends Component {
     state = {
         post: {},
-        commentList:[]
+        commentList: [],
     };
     componentDidMount() {
         fetch(
@@ -14,16 +14,14 @@ class Post extends Component {
             .then((post) => {
                 this.setState({ post });
             });
-        fetch(
-            `https://jsonplaceholder.typicode.com/comments/`
-        )
+        fetch(`https://jsonplaceholder.typicode.com/comments/`)
             .then((response) => response.json())
             .then((comments) => {
                 let filteredList = comments.filter((comment) => {
-
-                  return comment.postId == this.props.match.params.id})
-                console.log(comments)
-                this.setState({ commentList: filteredList});
+                    return comment.postId == this.props.match.params.id;
+                });
+                console.log(comments);
+                this.setState({ commentList: filteredList });
             });
     }
     render() {
@@ -34,8 +32,15 @@ class Post extends Component {
                     body={this.state.post.body}
                     author={this.state.post.userId}
                 />
-                {this.state.commentList.length && this.state.commentList.map(comment => <Comment key={comment.id} name={comment.name} body={comment.body} email={comment.email}/>)}
-                {console.log(this.state.commentList)}
+                {this.state.commentList.length &&
+                    this.state.commentList.map((comment) => (
+                        <Comment
+                            key={comment.id}
+                            name={comment.name}
+                            body={comment.body}
+                            email={comment.email}
+                        />
+                    ))}
             </div>
         );
     }

@@ -1,0 +1,1 @@
+- Think about reusability of code for everything. Make it highly customised and try to add all the CSS required to each component itself.
