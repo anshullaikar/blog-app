@@ -14,5 +14,6 @@ export const AppRootStyle = createGlobalStyle`
     #app-container {
         width: 100vw;
         height: 100vh;
+        overflow-x: hidden;
     }
 `;
