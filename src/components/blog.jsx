@@ -14,12 +14,13 @@ class Blog extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="blog">
                 <h1>Blog</h1>
                 <div className="card-container">
                     {this.state.posts.map((post, index) => (
-                        <Link to={`/blog/${post.id}`}>
+                        <Link className="blog-card" to={`/blog/${post.id}`}>
                             <Card
+                                
                                 title={post.title}
                                 key={post.id}
                                 body={post.body}

@@ -10,7 +10,7 @@ import { Switch } from "react-router-dom";
 class App extends Component {
     render() {
         return (
-            <div>
+            <div id="app-container">
                 <NavBar />
                 <div className="content">
                     <Switch>
