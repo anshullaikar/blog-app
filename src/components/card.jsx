@@ -19,16 +19,11 @@ const CardAuthor = styled.h5`
     font-style: italic;
     font-weight: 300;
 `;
-class Card extends React.Component {
-    render() {
-        return (
-            <CardDiv>
-                <CardTitle>{this.props.title}</CardTitle>
-                <p>{this.props.body}</p>
-                <CardAuthor>Written by: {this.props.author}</CardAuthor>
-            </CardDiv>
-        );
-    }
-}
-
+const Card = ({title, body, author}) => (
+    <CardDiv>
+        <CardTitle>{title}</CardTitle>
+        <p>{body}</p>
+        <CardAuthor>Written by: {author}</CardAuthor>
+    </CardDiv>
+);
 export default Card;
